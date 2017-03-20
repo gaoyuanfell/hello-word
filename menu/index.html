@@ -1,0 +1,89 @@
+<html app="app">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="ycui.css">
+    <link rel="stylesheet" href="menu.css">
+    <script src="jquery.js"></script>
+    <script src="ycui.js"></script>
+    <script src="angular.js"></script>
+    <script src="menu.js"></script>
+</head>
+
+<body>
+    <div class="frame-menu" ng-controller="menuCtrl">
+        <nav>
+
+        </nav>
+        <div class="menu">
+            <ul>
+                <li class="menu-pl">
+                    <p>订单管理</p>
+                    <ul class="">
+                        <li>
+                            <a href="#!/menu/a.html" data-route="a"><span>查询排期</span></a>
+                        </li>
+                        <li>
+                            <a href="#!/menu/b.html" data-route="b"><span>投放订单</span></a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" data-route="c"><span>内容管理</span></a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" data-route="d"><span>默认广告</span></a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="menu-pl">
+                    <p>订单管理</p>
+                    <ul class="">
+                        <li>
+                            <a href="javascript:void(0)" data-route="a"><span>查询排期</span></a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" data-route="b"><span>投放订单</span></a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" data-route="c"><span>内容管理</span></a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" data-route="d"><span>默认广告</span></a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="menu-pl">
+                    <p>订单管理</p>
+                    <ul class="">
+                        <li>
+                            <a href="javascript:void(0)" data-route="a"><span>查询排期</span></a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" data-route="b"><span>投放订单</span></a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" data-route="c"><span>内容管理</span></a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" data-route="d"><span>默认广告</span></a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="frame-top">
+
+    </div>
+    <div class="frame-main">
+        <iframe id="iframe" src="about:blank" name="main" frameborder="0" width="100%" height="100%"></iframe>
+    </div>
+
+    <script>
+        $R.reg([{name:'a',url:'a/a.html'},{name:'b',url:'b/b.html'},{name:'c',url:'c.html'}]);
+        $R.start('a');//默认路由
+    </script>
+</body>
+
+</html>

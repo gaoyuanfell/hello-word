@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' />
+</head>
+
+<body style="margin:0px;">
+    <!-- <script type="text/javascript">
+   ADEZ_slotid = 1019179;
+   ADEZ_sync = true;
+</script>
+<script type="text/javascript" src="http://pic.ggxt.net/sdk/js/core.m.js"></script>      
+     -->
+    <!-- cpu feeds block -->
+    <div id="yn_cpu_top"></div>
+    <!-- 
+ <script type="text/javascript">
+	var cpro_psid = "u2878152";
+	var cpro_pswidth = "auto";
+	var cpro_psheight = "180";
+	var cpro_psdata ={
+		ltu: "http://winasdaq.com ;  "
+	}
+</script>
+<script src="http://su.bdimg.com/static/dspui/js/um_wifi.js" type="text/javascript"></script>
+ -->
+    <div class="cpu-feeds-block" id="cpu-feeds-block" data-site-id="268951591" data-block-id="2266"></div>
+    <script>
+        (function () {
+            var c = "//cpu.baidu.com";
+            var a = function () {
+                var e = document.createElement("script");
+                e.id = "cpu-block-entry";
+                e.src = c + "/js/cb.js";
+                document.head.appendChild(e)
+            };
+            var b = function (g) {
+                var h = {
+                    msg: g.toString() || "no err msg",
+                    line: g.lineno || -1
+                };
+                var f = document.createElement("img");
+                f.src = c + "/msg?m=block&e=" + encodeURIComponent(JSON.stringify(h))
+            };
+            try {
+                window.feedsbycpu = window.feedsbycpu || [];
+                window.feedsbycpu.push({
+                    siteId: '268951591',
+                    blockId: '2266',
+                    display: "auto"
+                });
+                document.getElementById("cpu-block-entry") || a()
+            } catch (d) {
+                b(d)
+            }
+        })();
+    </script>
+    <script>
+        function check_ad() {
+            var frames = document.getElementsByTagName("iframe");
+            if (frames.length > 0) {
+                for (var i = 0; i < frames.length; i++) {
+                    if (frames[i].src.indexOf("cpu.baidu.com") != -1) {
+                        frames[i].style.height = "100%"
+                        document.getElementById("cpu-feeds-block").style.height = "100%";
+                    }
+                }
+            } else {
+                setTimeout(check_ad, 1000);
+            }
+        };
+        check_ad();
+    </script>
+</body>

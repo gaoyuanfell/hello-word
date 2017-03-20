@@ -1,0 +1,110 @@
+.frame-menu {
+    position: absolute;
+    background: #ccc;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 90px;
+    z-index: 1000;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+}
+
+.frame-menu .menu {
+    position: absolute;
+    top: 65px;
+    bottom: 0;
+    overflow: hidden;
+    width: 90px;
+    zoom: 1;
+    background: #ca8d8d;
+}
+
+.frame-menu .menu:hover {
+    overflow: auto;
+}
+
+.frame-top {
+    position: absolute;
+    background: red;
+    top: 0;
+    right: 0;
+    width: 200px;
+    height: 65px;
+    z-index: 100000;
+}
+
+.frame-main {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    top: 0;
+    left: 90px;
+    background-color: #e2e2e2;
+}
+
+.frame-menu .menu::-webkit-scrollbar {
+    width: 8px;
+    height: 8px
+}
+
+.frame-menu .menu::-webkit-scrollbar-track {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0)
+}
+
+/*.frame-menu .menu::-webkit-scrollbar-track:hover {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .4);
+    background-color: rgba(0, 0, 0, .01)
+}*/
+
+.frame-menu .menu::-webkit-scrollbar-track:active {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .4);
+    background-color: rgba(0, 0, 0, .05)
+}
+
+.frame-menu .menu::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, .05);
+    border-radius: 10px;
+    -webkit-box-shadow: inset 1px 1px 0 rgba(0, 0, 0, .1)
+}
+
+.frame-menu .menu::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, .2);
+    border-radius: 10px;
+    -webkit-box-shadow: inset 1px 1px 0 rgba(0, 0, 0, .1)
+}
+
+/*.frame-menu .menu::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(0, 0, 0, .4);
+    -webkit-box-shadow: inset 1px 1px 0 rgba(0, 0, 0, .1)
+}*/
+
+.frame-menu .menu::-webkit-scrollbar-thumb:active {
+    background: rgba(0, 0, 0, .6)
+}
+
+.menu li {
+    padding-left: 10px;
+    display: inline-block;
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+
+.menu .menu-pl {
+    cursor: pointer;
+    height: auto;
+}
+
+.menu .menu-pl ul{
+    overflow: hidden;
+    height: 0;
+}
+
+.menu .menu-pl ul.active{
+    overflow: hidden;
+    height: auto;
+}
+

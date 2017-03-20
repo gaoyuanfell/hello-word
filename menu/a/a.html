@@ -1,0 +1,111 @@
+<html ng-app="xhw">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../angular.js"></script>
+    <script src="../jquery.min.js"></script>
+    <script src="../webuploader.min.js"></script>
+    <script src="../child.js"></script>
+    <script src="../global.js"></script>
+    <link rel="stylesheet" href="../webuploader.css">
+    <link rel="stylesheet" href="../global.css">
+    <link rel="stylesheet" href="../ycui.css">
+</head>
+
+<body>
+    <a href="javascript:void(0)" data-route="b?id=你好?12">ba</a>
+
+    <div id="a" style="line-height:1" class="yc-btn-web">
+        上传
+    </div>
+
+    <div id="b" style="line-height:1" class="yc-btn-web">
+        上传
+    </div>
+
+    <div id="c" style="line-height:1" class="yc-btn-web">
+        上传
+    </div>
+
+    <style>
+        #mousewheel {
+            /*border: 1px solid #ccc;*/
+            width: 500px;
+            height: 60px;
+            position: relative;
+            overflow-x: hidden;
+            overflow-y: hidden;
+            white-space: nowrap;
+        }
+        
+        #mousewheel:hover {
+            overflow-x: auto;
+        }
+        
+        .item {
+            width: 50px;
+            margin: 5px;
+            height: 40px;
+            border: 1px solid #ccc;
+            display: inline-block;
+            text-align: center;
+            line-height: 40px;
+        }
+    </style>
+
+    <div id="mousewheel">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+        <div class="item">8</div>
+        <div class="item">9</div>
+        <div class="item">10</div>
+        <div class="item">11</div>
+        <!--<div class="item">12</div>-->
+        <!--<div class="item">13</div>-->
+
+    </div>
+
+    <div ng-controller="testCtrl">
+        <div yc-select="userList" width="150" value="query._select" key="id" session="session" group="session-test"></div>
+
+        <br>
+
+        <button ng-click="show()">module</button>
+        <br>
+        <div class="dialog-bg hide" yc-module="module">
+            <div class="dialog-wraper">
+                <div class="dialog-title">
+                    <span class="title">title</span>
+                    <i class="dialog-close yc-icon">&#xe654;</i>
+                </div>
+                <div class="dialog-con">
+
+                </div>
+                <div class="dialog-submit">
+                    <a href="javascript:void(0)" class="ok">确定</a>
+                    <a href="javascript:void(0)" class="no">取消</a>
+                </div>
+            </div>
+        </div>
+
+        <br>
+    </div>
+
+
+    {{123}}
+
+    <script>
+    uploadInit({pick:{id:'#a'}})
+    uploadInit({pick:{id:'#b'}})
+    uploadInit({pick:{id:'#c'}})
+</script>
+
+</body>
+
+</html>

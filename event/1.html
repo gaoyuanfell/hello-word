@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="1.js"></script>
+    <link rel="stylesheet" type="" href="">
+</head>
+<body>
+    
+
+    <script>
+        var style = '<style>html{font-size:12px;}</style>';
+        var js = '<script src="/static/lib/angular.min.js"></script>'
+        var css = '<link rel="stylesheet" href="/static/css/ycui.css"><link rel="stylesheet" href="/static/css/global.css"><link rel="stylesheet" href="/static/css/listManage.css">'
+        var script = '<script>!function(){window.print();}()</script>';
+        var bdhtml=window.document.body.innerHTML;
+        var startStr="<!--startprint-->";//设置打印开始区域   
+        var endStr="<!--endprint-->";//设置打印结束区域   
+        var printHtml=bdhtml.substring(bdhtml.indexOf(startStr)+startStr.length,bdhtml.indexOf(endStr));//从标记里获取需要打印的页面 
+        window.open('http://xhw.adpush.cn','打印',"toolbar =no, menubar=no, scrollbars=no, resizable=no, location=no, status=no").document.write('<div ng-app>'+ css + style + js + printHtml + script +'</div>');
+    </script>
+
+
+
+    <button onclick="asdasd()">电影</button>
+    <div>
+        <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="http://music.163.com/outchain/player?type=2&id=19065941&auto=1&height=66"></iframe>
+    </div>
+</body>
+<script>
+    var s = event();
+    s.listen('click', function listens(data) {
+        this.name = data.name
+        console.info("今天是谁的电影" + this.name);
+    });
+
+    s.listen('click', function listens(data) {
+        this.name = data.name
+        console.info("今天是谁的电影" + this.name);
+    });
+
+    s.listen('click', function listens(data) {
+        this.name = data.name
+        console.info("今天是谁的电影" + this.name);
+    });
+
+    function asdasd() {
+        s.trigger('click',{ name: '麻生希' });
+    }
+
+    console.info(s.obj);
+
+</script>
+</html>
